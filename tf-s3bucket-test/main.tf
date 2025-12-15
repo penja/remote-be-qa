@@ -9,6 +9,7 @@ locals {
   dynamodb_table_name = "terraform-locks"
 }
 
+
 # Create the S3 bucket to store the Terraform state file
 resource "aws_s3_bucket" "terraform_state" {
   bucket = local.bucket_name
@@ -18,6 +19,8 @@ resource "aws_s3_bucket" "terraform_state" {
     enabled = true
   }
 }
+
+force_destroy=true
 
 # Create a DynamoDB table for state locking
 resource "aws_dynamodb_table" "terraform_locks" {
