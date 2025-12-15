@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 locals {
-  bucket_name         = "alfiia-terraform-state-bucket"
+  bucket_name         = "penja-terraform-state-bucket"
   dynamodb_table_name = "terraform-locks"
 }
 
