@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "alfiia-terraform-state-bucket"
+    bucket         = "penja-terraform-state-bucket"
     key            = "global/s3/terraform.tfstate"  # Path in S3 where the state file will be stored
     region         = "us-west-2"
     encrypt        = true                           # Enables server-side encryption
